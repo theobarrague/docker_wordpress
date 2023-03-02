@@ -1,0 +1,24 @@
+---
+exec: [ "/usr/sbin/apachectl", "-D", "FOREGROUND" ]
+data_sources: [ "defaults", "environment" ]
+template_sources: [ "file" ]
+
+environment:
+  prefix: ""
+
+defaults:
+  global:
+    auth_key: "changeme"
+    secure_auth_key: "changeme"
+    logged_in_key: "changeme"
+    nonce_key: "changeme"
+    auth_salt: "changeme"
+    secure_auth_salt: "changeme"
+    logged_in_salt: "changeme"
+    nonce_salt: "changeme"
+    table_prefix: "wp_"
+    debug: "false"
+    database_charset: "utf8mb4"
+    database_collate: "utf8mb4_unicode_ci"
+  wp-config.php.erb:
+      target: /var/www/wordpress/wp-config.php 
