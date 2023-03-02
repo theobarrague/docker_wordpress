@@ -21,4 +21,4 @@ defaults:
     database_charset: "utf8mb4"
     database_collate: "utf8mb4_unicode_ci"
   wp-config.php.erb:
-      target: /var/www/wordpress/wp-config.php 
+    target: /var/www/wordpress/wp-config.php 
